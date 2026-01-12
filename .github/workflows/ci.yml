@@ -1,0 +1,90 @@
+name: Drupal 10 CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  drupal:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: drupal
+          MYSQL_USER: drupal
+          MYSQL_PASSWORD: drupal
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, dom, curl, gd, intl, pdo_mysql, opcache
+          tools: composer, drush
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Install Drupal
+        run: |
+          cp web/sites/default/default.settings.php web/sites/default/settings.php
+          chmod 666 web/sites/default/settings.php
+          mkdir -p web/sites/default/files
+          chmod 777 web/sites/default/files
+
+          vendor/bin/drush site:install standard \
+            --db-url=mysql://drupal:drupal@127.0.0.1:3306/drupal \
+            --site-name="Drupal CI" \
+            --account-name=admin \
+            --account-pass=admin \
+            -y
+
+      - name: Run database updates
+        run: vendor/bin/drush updb -y
+
+      - name: Import config (if exists)
+        run: |
+          if [ -d config/sync ]; then
+            vendor/bin/drush cim -y
+          fi
+
+      - name: Run Drupal status check
+        run: vendor/bin/drush status
+
+      - name: Run PHPUnit tests (if any)
+        run: |
+          if [ -f vendor/bin/phpunit ]; then
+            vendor/bin/phpunit
+          else
+            echo "No PHPUnit tests found"
+          fi
