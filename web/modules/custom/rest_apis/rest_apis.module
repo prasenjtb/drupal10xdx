@@ -1,0 +1,3 @@
+<?php
+
+//$service = \Drupal::service('csrf_token')->get();

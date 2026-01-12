@@ -1,0 +1,16 @@
+name: customized
+type: module
+description: 'Customized module for Drupal'
+package: Custom
+core_version_requirement: ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2025-01-08
+version: '1.0'
+datestamp: 1736346720
+
+dependencies:
+  - drupal:node
+
+# Declare cache bin here
+cache_bins:
+  - my_custom_bin

@@ -1,0 +1,11 @@
+custom_entity_node.type_add:
+  title: 'Add custom_entity_node type'
+  route_name: entity.custom_entity_node_type.add_form
+  appears_on:
+    - entity.custom_entity_node_type.collection
+
+custom_entity_node.add_page:
+  title: 'Add custom_entity_node'
+  route_name: entity.custom_entity_node.add_page
+  appears_on:
+    - entity.custom_entity_node.collection

@@ -1,0 +1,19 @@
+uuid: 87c4f75e-6f77-47cc-b865-e4f8e290c198
+langcode: en
+status: true
+dependencies: {  }
+id: splitprod
+label: splitprod
+description: 'splitprod is for Production server'
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  block_class: 0
+theme: {  }
+complete_list:
+  - core.date_format.short
+partial_list:
+  - system.menu.main

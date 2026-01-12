@@ -1,0 +1,39 @@
+<?php
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Batch operation callback.
+ */
+function node_batch_create_node($index, &$context) {
+
+  if (!isset($context['results']['created'])) {
+    $context['results']['created'] = 0;
+  }
+
+  $node = Node::create([
+    'type' => 'article',
+    'title' => 'Batch Node ' . $index,
+    'status' => 1,
+  ]);
+
+  $node->save();
+
+  $context['results']['created']++;
+  $context['message'] = t('Creating node @num', ['@num' => $index]);
+}
+
+/**
+ * Batch finished callback.
+ */
+function node_batch_finished($success, $results, $operations) {
+  if ($success) {
+    \Drupal::messenger()->addMessage(t(
+      '@count nodes created successfully.',
+      ['@count' => $results['created']]
+    ));
+  }
+  else {
+    \Drupal::messenger()->addError(t('Batch processing failed.'));
+  }
+}

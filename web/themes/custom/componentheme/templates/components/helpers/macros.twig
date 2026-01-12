@@ -1,0 +1,5 @@
+{% macro icon(name) %}
+  <svg class="c-icon c-icon--{{ name }}">
+    <use xlink:href="/themes/custom/componentheme/assets/icons/sprite.svg#{{ name }}"></use>
+  </svg>
+{% endmacro %}

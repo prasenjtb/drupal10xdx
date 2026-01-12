@@ -1,0 +1,35 @@
+uuid: 754e556b-3d52-4828-8a65-6f6fb74aaca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - rest.resource.news_menu_api
+    - rest.resource.news_news
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - rest
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'delete own files'
+  - 'post comments'
+  - 'restful get news_menu_api'
+  - 'restful get news_news'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

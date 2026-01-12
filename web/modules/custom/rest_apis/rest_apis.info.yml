@@ -1,0 +1,12 @@
+name: rest_apis
+type: module
+description: 'Custom rest-apis for Drupal'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:rest
+  - drupal:basic_auth
+
+# Information added by Drupal.org packaging script on 2025-01-08
+version: '1.0'
+datestamp: 1736346720

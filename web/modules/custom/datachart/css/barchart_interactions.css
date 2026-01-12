@@ -1,0 +1,10 @@
+#chart-table-container .custom-table-rapper .table-title {
+    text-transform: uppercase;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 12px;
+    vertical-align: middle;
+}
+

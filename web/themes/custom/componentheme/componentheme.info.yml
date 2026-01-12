@@ -1,0 +1,29 @@
+name: Componentheme Reusable Theme
+type: theme
+core_version_requirement: ^10
+base theme: claro
+
+libraries:
+  - componentheme/global
+  - componentheme/layout_themes
+
+regions:
+  breadcrumb: Breadcrumb
+  header: Header
+  highlighted: Highlighted
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+
+twig:
+  namespaces:
+    componentheme: templates/components
+
+component-libraries:
+  componentheme:
+    paths:
+      - components
+
+#components:
+  #namespaces:
+    #componentheme: components

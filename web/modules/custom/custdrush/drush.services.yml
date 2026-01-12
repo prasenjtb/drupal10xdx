@@ -1,0 +1,18 @@
+services:
+  custdrush.commands:
+    class: Drupal\custdrush\Commands\CustdrushCommands
+    arguments: ['@entity_type.manager','@logger.factory', '@customized.greeting']
+    tags:
+      - { name: drush.command }
+
+  custdrush.auditcommands:
+    class: Drupal\custdrush\Commands\ContentAuditCommands
+    arguments: ['@entity_type.manager','@logger.factory']
+    tags:
+      - { name: drush.command }
+
+  custdrush.batchcommands:
+    class: Drupal\custdrush\Commands\ResaveNodesCommands
+    arguments: ['@logger.factory']
+    tags:
+      - { name: drush.command }

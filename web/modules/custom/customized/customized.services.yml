@@ -1,0 +1,34 @@
+services:
+  customized.event_subscriber:
+    class: Drupal\customized\EventSubscriber\CustomizedEventSubscriber
+    arguments: ['@messenger'] # Example: Injecting the messenger service
+    tags:
+      - { name: event_subscriber }
+ 
+  customized.current_user_name:
+    class: Drupal\customized\Service\CurrentUserName
+    # Add arguments here if your service depends on other services.
+    arguments: ['@current_user'] # Example: Injecting the current_user service  
+
+  customized.route_subscriber:
+    class: Drupal\customized\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  customized.email.validator:
+    class: Drupal\customized\Service\CustomEmailValidator
+    arguments: ['@logger.channel.default']
+
+  customized.greeting:
+    class: Drupal\customized\Service\GreetingService
+    arguments: ['@logger.channel.default']
+
+  customized.cache.my_custom_bin:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      #- { name: cache.bin, default_backend: cache.backend.permanent_database }
+      - { name: cache.bin }
+    factory: cache_factory:get
+    #factory: ['@cache_factory', 'get']
+    arguments: ['my_custom_bin']
+    

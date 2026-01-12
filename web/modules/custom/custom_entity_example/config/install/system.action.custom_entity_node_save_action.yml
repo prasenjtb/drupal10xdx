@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity_example
+id: custom_entity_node_save_action
+label: 'Save custom_entity_nodes'
+type: custom_entity_node
+plugin: entity:save_action:custom_entity_node
+configuration: {  }

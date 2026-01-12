@@ -1,0 +1,4 @@
+administer custom_entity_node types:
+  title: 'Administer custom_entity_node types'
+  description: 'Maintain the types of custom entity node entity.'
+  restrict access: true

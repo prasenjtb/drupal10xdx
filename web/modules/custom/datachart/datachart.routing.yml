@@ -1,0 +1,15 @@
+datachart.statusTracker:
+  path: '/status-tracker'
+  defaults:
+    _controller: '\Drupal\datachart\Controller\BarChartController::enquiryCountChart'
+    _title: 'Bar Chart'
+  requirements:
+    _permission: 'access content'
+
+datachart.assigneeTracker:
+  path: '/assignee-tracker'
+  defaults:
+    _controller: '\Drupal\datachart\Controller\AssigneeChartController::AssigneeChart'
+    _title: 'Assignee Bar Chart'
+  requirements:
+    _permission: 'access content'  

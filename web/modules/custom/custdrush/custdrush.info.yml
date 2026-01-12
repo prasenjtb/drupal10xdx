@@ -1,0 +1,5 @@
+name: Cust Drush
+type: module
+description: Provides custom Drush commands.
+core_version_requirement: ^10 || ^11
+package: Custom

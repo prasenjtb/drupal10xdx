@@ -1,0 +1,26 @@
+uuid: 8cb4a655-6c19-49ab-b645-803bc4343ee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - node
+    - rest_api_authentication
+    - rest_apis
+    - serialization
+_core:
+  default_config_hash: 6ONvVCbif1qZnRfa8XmPzMwNKLDhF6K7eTrTgIVtP5E
+id: entity.node
+plugin_id: 'entity:node'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - rest_api_authentication
+    - basic_auth

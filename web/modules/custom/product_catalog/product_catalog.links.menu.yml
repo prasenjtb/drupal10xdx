@@ -1,0 +1,11 @@
+entity.product_type.collection:
+  title: 'product types'
+  description: 'Manage and CRUD actions on custom_entity_node type.'
+  parent: system.admin_structure
+  route_name: entity.product_type.collection
+
+entity.product.collection:
+  title: 'product'
+  description: 'List of product.'
+  route_name: entity.product.collection
+  parent: system.admin_content

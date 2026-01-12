@@ -1,0 +1,20 @@
+uuid: 8865509b-57b1-4a38-bfba-eb9e868b5af8
+langcode: en
+status: true
+dependencies: {  }
+id: splitdev
+label: splitdev
+description: 'splitdev for Main site in Dev Local'
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list:
+  - core.date_format.long
+partial_list:
+  - system.menu.devel

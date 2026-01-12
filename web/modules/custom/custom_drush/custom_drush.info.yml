@@ -1,0 +1,5 @@
+name: Custom Drush Commands
+type: module
+description: Provides multiple Drush 11+ attribute-based commands for Drupal 10.
+core_version_requirement: ^10 || ^11
+package: Custom

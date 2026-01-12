@@ -1,0 +1,21 @@
+uuid: 2d60d670-6647-4a51-ba8c-bdc9e0d199ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - news
+    - serialization
+    - user
+id: news_menu_api
+plugin_id: news_menu_api
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie

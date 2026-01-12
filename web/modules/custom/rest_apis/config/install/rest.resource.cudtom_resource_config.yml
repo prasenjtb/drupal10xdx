@@ -1,0 +1,10 @@
+#id: custom_resource
+#plugin_id: custom_resource
+#granularity: resource
+#configuration:
+#  methods:
+#    - DELETE
+#  formats:
+#    - json
+#  authentication:
+#    - basic_auth

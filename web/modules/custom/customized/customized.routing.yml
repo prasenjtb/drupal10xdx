@@ -1,0 +1,7 @@
+customized.form:
+  path: '/admin/customized-batch'
+  defaults:
+    _form: '\Drupal\customized\Form\BatchForm'
+    _title: 'Batch Example'
+  requirements:
+    _permission: 'administer site configuration'

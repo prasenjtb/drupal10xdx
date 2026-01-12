@@ -1,0 +1,21 @@
+uuid: 3cc78909-2031-415c-8d34-7ed34ef3c93c
+langcode: en
+status: true
+dependencies:
+  module:
+    - news
+    - serialization
+    - user
+id: news_news
+plugin_id: news_news
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie

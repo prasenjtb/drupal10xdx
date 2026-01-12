@@ -1,0 +1,6 @@
+my_entity.admin:
+  title: 'My Entity'
+  description: 'Manage My Entity items'
+  parent: system.admin_content
+  route_name: entity.my_entity.collection
+  weight: 10

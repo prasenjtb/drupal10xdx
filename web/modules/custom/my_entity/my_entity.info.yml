@@ -1,0 +1,5 @@
+name: My Entity
+type: module
+description: Provides a custom content entity.
+package: Custom
+core_version_requirement: ^10

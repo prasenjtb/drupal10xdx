@@ -1,0 +1,29 @@
+uuid: 48be44d8-5fec-43e2-8cd1-819a54e4f5ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - rest.resource.news_menu_api
+    - rest.resource.news_news
+  module:
+    - comment
+    - contact
+    - filter
+    - rest
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'restful get news_menu_api'
+  - 'restful get news_news'
+  - 'search content'
+  - 'use text format restricted_html'

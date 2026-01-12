@@ -1,0 +1,5 @@
+name: 'custom entity example'
+type: module
+description: 'custom example entity'
+package: custom
+core_version_requirement: ^10 || ^11

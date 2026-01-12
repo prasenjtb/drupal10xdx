@@ -1,0 +1,11 @@
+entity.custom_entity_node_type.collection:
+  title: 'custom_entity_node types'
+  description: 'Manage and CRUD actions on custom_entity_node type.'
+  parent: system.admin_structure
+  route_name: entity.custom_entity_node_type.collection
+
+entity.custom_entity_node.collection:
+  title: 'custom_entity_nodes'
+  description: 'List of custom_entity_nodes.'
+  route_name: entity.custom_entity_node.collection
+  parent: system.admin_content

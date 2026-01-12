@@ -1,0 +1,21 @@
+.layout-theme--dark {
+  background: #222;
+  color: #fff;
+}
+
+.layout-theme--light {
+  background: #fbf;
+  color: #000;
+}
+
+.layout-theme--hero {
+  padding: 50px;
+  background: linear-gradient(45deg, #6a5acd, #48d1cc);
+  color: white;
+}
+
+.layout-theme--cards .block {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}

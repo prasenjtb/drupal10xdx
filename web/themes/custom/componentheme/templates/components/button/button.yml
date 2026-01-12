@@ -1,0 +1,8 @@
+props:
+  text:
+    type: string
+    required: true
+  variant:
+    type: string
+    required: false
+    default: 'primary'

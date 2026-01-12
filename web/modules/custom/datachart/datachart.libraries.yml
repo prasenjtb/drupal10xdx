@@ -1,0 +1,13 @@
+barchart_interactions:
+  version: 1.x
+  js:
+    js/barchart_interactions.js: {}
+  css:
+    theme:
+      css/barchart_interactions.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+    - core/drupal.ajax
+    - charts/highcharts

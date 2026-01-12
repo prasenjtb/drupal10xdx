@@ -1,0 +1,20 @@
+uuid: 8b7639e8-e6f8-482e-bcbd-dc267f9b41eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - rest_apis
+    - serialization
+id: custom_resource
+plugin_id: custom_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - basic_auth

@@ -1,0 +1,47 @@
+entity.product_type.collection:
+  path: '/admin/structure/product-types'
+  defaults:
+    _entity_list: 'product_type'
+    _title: 'Product types - custom Entity'
+  requirements:
+    _permission: 'administer product types'
+
+entity.product_type.add:
+  path: '/admin/structure/product-types/add'
+  defaults:
+    _entity_form: 'product_type.add'
+    _title: 'Add product type'
+  requirements:
+    _permission: 'administer product types'
+
+entity.product_type.edit_form:
+  path: '/admin/structure/product-types/edit/{product_type}'
+  defaults:
+    _entity_form: 'product_type.edit'
+    _title: 'Product types edit'
+  requirements:
+    _permission: 'administer product types'
+
+entity.product_type.delete_form:
+  path: '/admin/structure/product-types/delete/{product_type}'
+  defaults:
+    _entity_form: 'product_type.delete'
+    _title: 'Product types delete'
+  requirements:
+    _permission: 'administer product types'
+
+entity.product.collection:
+  path: '/admin/content/product'
+  defaults:
+    _entity_list: 'product'
+    _title: 'Product List - custom Entity Node'
+  requirements:
+    _permission: 'administer product types'
+
+entity.product.add:
+  path: '/admin/content/product/add'
+  defaults:
+    _entity_form: 'product.add'
+    _title: 'Add product'
+  requirements:
+    _permission: 'administer product types'

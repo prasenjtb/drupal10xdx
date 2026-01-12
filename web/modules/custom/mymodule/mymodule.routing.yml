@@ -1,0 +1,7 @@
+mymodule.webhook:
+  path: '/webhook/payment'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\WebhookController::handle'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Batch process callback.
+ */
+// function customized_process($number, &$context) {
+//   // Simulate work
+//   \Drupal::logger('customized')->notice('Processing item @num', ['@num' => $number]);
+
+//   // Store results
+//   $context['results'][] = $number;
+
+//   // Progress message
+//   $context['message'] = t('Processing item @num', ['@num' => $number]);
+// }
+
+function customized_process($nid, &$context) {
+  // Your logic here
+  $context['message'] = t('Processing node @nid', ['@nid' => $nid]);
+}
+
+/**
+ * Batch finished callback.
+ */
+function customized_finished($success, $results, $operations) {
+  if ($success) {
+    \Drupal::messenger()->addMessage(t('Successfully processed @count items.', [
+      '@count' => count($results),
+    ]));
+  }
+  else {
+    \Drupal::messenger()->addError(t('Batch processing failed.'));
+  }
+}

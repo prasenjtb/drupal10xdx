@@ -1,0 +1,9 @@
+name: node batch
+type: module
+description: 'node_batch module for Drupal'
+package: Custom
+core_version_requirement: ^10
+
+# Information added by Drupal.org packaging script on 2025-01-08
+version: '1.0'
+datestamp: 1736346720

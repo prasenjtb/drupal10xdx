@@ -1,0 +1,7 @@
+node_batch.form:
+  path: '/admin/node-batch'
+  defaults:
+    _form: '\Drupal\node_batch\Form\NodeBatchForm'
+    _title: 'Node Batch Creation'
+  requirements:
+    _permission: 'administer nodes'

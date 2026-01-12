@@ -1,0 +1,22 @@
+uuid: c3ed8fc7-5150-489a-afee-cd189cf8444f
+langcode: en
+status: true
+dependencies: {  }
+id: splitstage
+label: splitstage
+description: 'splitstage is for Staging server'
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_search: 0
+theme: {  }
+complete_list:
+  - core.date_format.medium
+partial_list:
+  - system.menu.admin

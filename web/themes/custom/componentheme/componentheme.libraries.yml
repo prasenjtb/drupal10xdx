@@ -1,0 +1,36 @@
+global:
+  css:
+    theme:
+      assets/css/global.css: {}
+  js:
+    assets/js/global.js: {}
+
+button:
+  css:
+    component:
+      templates/components/button/button.css: {}
+
+card:
+  css:
+    component:
+      templates/components/card/card.css: {}
+
+hero:
+  css:
+    component:
+      templates/components/hero/hero.css: {}
+      components/hero/hero.css: {}
+
+layout_themes:
+  css:
+    theme:
+      assets/css/layout-themes.css: {}
+
+node-scripts:
+  js:
+    assets/js/node.js: {}
+
+#button:
+  #css:
+    #theme:
+      #components/button/button.css: {}

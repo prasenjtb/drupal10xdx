@@ -1,0 +1,5 @@
+name: Advertiser Entity
+type: module
+description: Provides a custom Advertiser content entity.
+package: Custom
+core_version_requirement: ^10

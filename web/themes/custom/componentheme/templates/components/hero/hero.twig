@@ -1,0 +1,38 @@
+{{ attach_library('componentheme/hero') }}
+
+{% if title or subtitle or image %}
+  <section class="hero">
+    <div class="hero__inner hero--wrapper">
+
+      {# Background image or image tag #}
+      {% if image %}
+        <div class="hero__image">
+          <img src="{{ image }}" alt="{{ title|default('Hero image') }}">
+        </div>
+      {% endif %}
+
+      <div class="hero__content">
+        {% if eyebrow %}
+          <p class="hero__eyebrow">{{ eyebrow }}</p>
+        {% endif %}
+
+        {% if title %}
+          <h1 class="hero__title">{{ title }}</h1>
+        {% endif %}
+
+        {% if subtitle %}
+          <p class="hero__subtitle">{{ subtitle }}</p>
+        {% endif %}
+        
+        {% if anytitle %}
+          <p class="hero__anytitle hero--wrapper">{{ anytitle }}</p>
+        {% endif %}
+
+        {% if cta_text and cta_url %}
+          <a href="{{ cta_url }}" class="hero__cta">{{ cta_text }}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </section>
+{% endif %}

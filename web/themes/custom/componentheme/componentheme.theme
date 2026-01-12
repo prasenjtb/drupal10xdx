@@ -1,0 +1,44 @@
+<?php 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Template\Attribute;
+
+
+function componentheme_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'componentheme/global';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function componentheme_preprocess_node(array &$variables) {
+  $node = $variables['node'];
+
+  \Drupal::logger('componentheme')->notice('Node preprocess running for nid: @nid', [
+    '@nid' => $variables['node']->id(),
+  ]);
+
+  if ($node->hasField('field_layout_theme')) {
+    $theme = $node->get('field_layout_theme')->value;
+    //dump($theme);
+
+    if (!empty($theme)) {
+      $variables['theme_hook_suggestions'][] = 'node__' . $theme;
+    }
+  }
+
+  if ($node instanceof EntityInterface && $node->hasField('field_layout_theme')) {
+    $value = $node->get('field_layout_theme')->value;
+
+    if (!empty($value)) {   //dump($value);
+      // Add a CSS class to the node wrapper.
+      $variables['attributes']['class'][] = 'layout-theme--' . $value;
+    }
+  }
+
+  //Attach library to all nodes
+  $variables['#attached']['library'][] = 'componentheme/node-scripts';
+
+  if ($variables['node']->bundle() === 'article') {
+    $variables['title_attributes'] = new Attribute(['class' => ['article-title']]);
+  }
+}
