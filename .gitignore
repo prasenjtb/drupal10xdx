@@ -3,6 +3,9 @@
 # ----------------------------
 /core
 /vendor
+/web/core
+/web/modules/contrib
+/web/themes/contrib
 
 # ----------------------------
 # Drupal generated files
@@ -12,12 +15,12 @@
 /sites/*/translations
 
 # Keep default settings.php but ignore real one
-/sites/*/settings.php
-/sites/*/services.yml
+/web/sites/*/settings.php
+/web/sites/*/services.yml
 
 # Allow example/default files
-!/sites/default/default.settings.php
-!/sites/default/default.services.yml
+!/web/sites/default/default.settings.php
+!/web/sites/default/default.services.yml
 
 # ----------------------------
 # Configuration sync (optional)
