@@ -1,0 +1,6 @@
+uuid: 6782e213-fd4a-403b-8dc9-d138f4a56c70
+langcode: en
+status: true
+dependencies: {  }
+id: smart_phone
+label: 'Smart Phone'

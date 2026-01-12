@@ -1,0 +1,23 @@
+uuid: e0145b35-dc9e-4d02-b21a-1cd25de48f03
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - migrate_json_example
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: u8WTJoe060DrJePUOYubvcWCDhA5B9WynIqeeOpRLrI
+name: Product
+type: product
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

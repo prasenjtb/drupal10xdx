@@ -1,0 +1,22 @@
+uuid: a7338e4a-5e18-4af6-87ef-1bc7af86b70d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - customized
+  theme:
+    - olivero
+id: olivero_customformblock
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: custom_form_block
+settings:
+  id: custom_form_block
+  label: 'Custom Form Block'
+  label_display: visible
+  provider: customized
+  org_name: 'Web Development Com7'
+visibility: {  }

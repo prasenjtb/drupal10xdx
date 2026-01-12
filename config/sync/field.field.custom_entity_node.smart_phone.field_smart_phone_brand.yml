@@ -1,0 +1,29 @@
+uuid: 753734d0-a80a-4b17-8674-fb87286f8a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - custom_entity_example.custom_entity_node_type.smart_phone
+    - field.storage.custom_entity_node.field_smart_phone_brand
+    - taxonomy.vocabulary.brand
+id: custom_entity_node.smart_phone.field_smart_phone_brand
+field_name: field_smart_phone_brand
+entity_type: custom_entity_node
+bundle: smart_phone
+label: 'Smart Phone Brand'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brand: brand
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

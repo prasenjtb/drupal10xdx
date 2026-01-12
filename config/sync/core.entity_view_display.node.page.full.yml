@@ -1,0 +1,125 @@
+uuid: e72bdf39-3cc9-4304-bb10-b543be34afa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - customized
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          defa6e97-fc86-415d-95ff-1a1c26135952:
+            uuid: defa6e97-fc86-415d-95ff-1a1c26135952
+            region: first
+            configuration:
+              id: custom_form_block
+              label: 'Custom Form Block'
+              label_display: visible
+              provider: customized
+              context_mapping: {  }
+              org_name: ''
+            weight: 0
+            additional: {  }
+          faee114c-94cc-4cd7-8cd1-4e40dd84acfe:
+            uuid: faee114c-94cc-4cd7-8cd1-4e40dd84acfe
+            region: second
+            configuration:
+              id: 'field_block:node:page:created'
+              label: 'Authored on'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: above
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                  tooltip:
+                    date_format: fallback
+                    custom_date_format: ''
+                  time_diff:
+                    enabled: false
+                    future_format: '@interval hence'
+                    past_format: '@interval ago'
+                    granularity: 2
+                    refresh: 60
+                    description: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          81db06f2-210e-4cf1-a41e-9507caa1ea48:
+            uuid: 81db06f2-210e-4cf1-a41e-9507caa1ea48
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          00f226c5-ad90-4962-85b2-f73d5f2be669:
+            uuid: 00f226c5-ad90-4962-85b2-f73d5f2be669
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden: {  }

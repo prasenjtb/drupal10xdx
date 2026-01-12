@@ -1,0 +1,6 @@
+uuid: 958dbb83-43c6-4ec5-8fd5-99f6a52d745a
+langcode: en
+status: true
+dependencies: {  }
+id: smart_tv
+label: 'Smart TV'

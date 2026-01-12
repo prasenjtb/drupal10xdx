@@ -1,0 +1,13 @@
+uuid: 6a424c0f-0cc5-496f-b67c-ad693d569e51
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity_example
+_core:
+  default_config_hash: uiENRTeJy5Vr40BOwcD0CVHTo29yUI7DDK63xamvJ_Y
+id: custom_entity_node_save_action
+label: 'Save custom_entity_nodes'
+type: custom_entity_node
+plugin: 'entity:save_action:custom_entity_node'
+configuration: {  }

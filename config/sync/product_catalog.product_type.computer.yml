@@ -1,0 +1,6 @@
+uuid: 71dd2b60-18c3-4412-87b9-f6195852090e
+langcode: en
+status: true
+dependencies: {  }
+id: computer
+label: Computer

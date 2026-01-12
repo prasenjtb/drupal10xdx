@@ -1,0 +1,22 @@
+uuid: ca5559ee-f3b5-4b82-915a-3487706e5b72
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - componentheme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: componentheme_breadcrumbs
+theme: componentheme
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

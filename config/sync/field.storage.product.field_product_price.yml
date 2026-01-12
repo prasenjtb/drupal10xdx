@@ -1,0 +1,20 @@
+uuid: 6afbddbc-4986-4a2a-a996-970c7e61c84d
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_catalog
+id: product.field_product_price
+field_name: field_product_price
+entity_type: product
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

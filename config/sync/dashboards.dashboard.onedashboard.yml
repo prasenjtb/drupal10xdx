@@ -1,0 +1,10 @@
+uuid: b1a9504a-00b3-4d21-b5d3-6b575847770c
+langcode: en
+status: true
+dependencies: {  }
+id: onedashboard
+admin_label: OneDashboard
+category: Basic
+frontend: false
+weight: 0
+sections: {  }

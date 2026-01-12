@@ -1,0 +1,20 @@
+uuid: 8f06904f-7ed8-45e6-915c-87834ec237c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_catalog
+    - taxonomy
+id: product.field_product_brand
+field_name: field_product_brand
+entity_type: product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

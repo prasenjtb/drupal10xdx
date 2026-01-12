@@ -1,0 +1,23 @@
+uuid: 302c2d6f-14ac-42c9-9862-f47ab9e12dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.product.field_product_price
+    - product_catalog.product_type.mobile
+id: product.mobile.field_product_price
+field_name: field_product_price
+entity_type: product
+bundle: mobile
+label: 'Product Price'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1.0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

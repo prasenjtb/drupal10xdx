@@ -1,0 +1,194 @@
+uuid: bbe0b5f1-c843-4f5a-8237-887c1cd3b23c
+langcode: en
+status: true
+dependencies:
+  config:
+    - custom_entity_example.custom_entity_node_type.smart_phone
+    - field.field.custom_entity_node.smart_phone.field_smart_phone_brand
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0712a9bc-b3a0-4745-b661-edd307ba34eb:
+            uuid: 0712a9bc-b3a0-4745-b661-edd307ba34eb
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:label'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c1b1a14c-6669-4d43-a9b1-4a46696397ab:
+            uuid: c1b1a14c-6669-4d43-a9b1-4a46696397ab
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: boolean
+                label: above
+                settings:
+                  format: enabled-disabled
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          44df52cf-cd9d-403f-be6d-fe9595e769ff:
+            uuid: 44df52cf-cd9d-403f-be6d-fe9595e769ff
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          6ae746d1-5319-4ff9-8f60-164a6be4ce88:
+            uuid: 6ae746d1-5319-4ff9-8f60-164a6be4ce88
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:uid'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: author
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          4c24c4ff-347a-499e-b248-659d86e5a3f3:
+            uuid: 4c24c4ff-347a-499e-b248-659d86e5a3f3
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:created'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: timestamp
+                label: above
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                  tooltip:
+                    date_format: long
+                    custom_date_format: ''
+                  time_diff:
+                    enabled: false
+                    future_format: '@interval hence'
+                    past_format: '@interval ago'
+                    granularity: 2
+                    refresh: 60
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          f9fdce1f-8d14-4cdc-ab93-c7f2d72154f2:
+            uuid: f9fdce1f-8d14-4cdc-ab93-c7f2d72154f2
+            region: content
+            configuration:
+              id: 'field_block:custom_entity_node:smart_phone:field_smart_phone_brand'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+id: custom_entity_node.smart_phone.default
+targetEntityType: custom_entity_node
+bundle: smart_phone
+mode: default
+content:
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_smart_phone_brand:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: enabled-disabled
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden: {  }

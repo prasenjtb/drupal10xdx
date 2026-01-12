@@ -1,0 +1,20 @@
+uuid: 8ea03913-4701-4a21-9d70-ecb157da14a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity_example
+    - taxonomy
+id: custom_entity_node.field_smart_phone_brand
+field_name: field_smart_phone_brand
+entity_type: custom_entity_node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

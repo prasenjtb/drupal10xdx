@@ -1,0 +1,13 @@
+uuid: a20a8b81-6aeb-4e41-a1b5-c81c84962a2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity_example
+_core:
+  default_config_hash: 81Sy-TxlVWpk3W1QOf5pY_OC19BU931H0lDKg1gBzYE
+id: custom_entity_node_delete_action
+label: 'Delete custom_entity_nodes'
+type: custom_entity_node
+plugin: 'entity:delete_action:custom_entity_node'
+configuration: {  }

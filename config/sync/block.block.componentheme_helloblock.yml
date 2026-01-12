@@ -1,0 +1,20 @@
+uuid: b90e58ee-7fe5-4601-9d8a-7f13ab123781
+langcode: en
+status: true
+dependencies:
+  module:
+    - customized
+  theme:
+    - componentheme
+id: componentheme_helloblock
+theme: componentheme
+region: content
+weight: 0
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Hello Block'
+  label_display: visible
+  provider: customized
+visibility: {  }

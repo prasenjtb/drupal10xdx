@@ -1,0 +1,31 @@
+uuid: d6ae6b1d-546e-4dad-b10c-f8c8d45c6ad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.product.mobile.field_product_brand
+    - field.field.product.mobile.field_product_price
+    - product_catalog.product_type.mobile
+id: product.mobile.default
+targetEntityType: product
+bundle: mobile
+mode: default
+content:
+  field_product_brand:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_product_price:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

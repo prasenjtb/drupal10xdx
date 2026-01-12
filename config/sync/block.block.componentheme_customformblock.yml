@@ -1,0 +1,26 @@
+uuid: ce41023b-c919-44cf-b4a2-2b1aa3dbab90
+langcode: en
+status: true
+dependencies:
+  module:
+    - customized
+    - system
+  theme:
+    - componentheme
+id: componentheme_customformblock
+theme: componentheme
+region: content
+weight: 0
+provider: null
+plugin: custom_form_block
+settings:
+  id: custom_form_block
+  label: 'Custom Form Block'
+  label_display: visible
+  provider: customized
+  org_name: 'Web Development Com7'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

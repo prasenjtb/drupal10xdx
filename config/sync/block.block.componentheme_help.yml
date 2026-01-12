@@ -1,0 +1,22 @@
+uuid: 4c2fe361-5d07-4583-8ef5-5af3019fbfb8
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - componentheme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: componentheme_help
+theme: componentheme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
