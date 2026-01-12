@@ -1,7 +1,7 @@
 # ----------------------------
 # Drupal core (downloaded by Composer)
 # ----------------------------
-/core
+
 /vendor
 /web/core
 /web/modules/contrib
