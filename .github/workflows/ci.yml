@@ -37,21 +37,7 @@ jobs:
             ${{ runner.os }}-composer-
 
       - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
-
-      - name: Install Drupal
-        run: |
-          cp web/sites/default/default.settings.php web/sites/default/settings.php
-          chmod 666 web/sites/default/settings.php
-          mkdir -p web/sites/default/files
-          chmod 777 web/sites/default/files
-
-          vendor/bin/drush site:install standard \
-            --db-url=mysql://drupal:drupal@127.0.0.1:3306/drupal \
-            --site-name="Drupal CI" \
-            --account-name=admin \
-            --account-pass=admin \
-            -y
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader      
 
       - name: Run database updates
         run: vendor/bin/drush updb -y
