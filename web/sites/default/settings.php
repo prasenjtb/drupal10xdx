@@ -907,7 +907,11 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
 //$settings['config_sync_directory'] = 'sites/default/files/config_xkORSN6dBMTnzAZhbvxigqxLRbAW5GbjoQWjrP2s4fc61hp-Z0LS7DAIPzmJSmNIcdwuD--gMw/sync';
+<<<<<<< HEAD
 $settings['config_sync_directory'] = 'sites/default/config/sync';
+=======
+$settings['config_sync_directory'] = '../config/sync';
+>>>>>>> 4cdf5abe5bab5822dffefcb5f51461b42de5749a
 
 $settings['cache']['bins']['my_custom_bin'] = 'cache.backend.database';
 // OR memcache if you use it:
