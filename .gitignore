@@ -15,8 +15,10 @@
 /sites/*/translations
 
 # Keep default settings.php but ignore real one
-/web/sites/*/settings.php
-/web/sites/*/services.yml
+#/web/sites/*/settings.php
+#/web/sites/*/services.yml
+
+/web/sites/default/files
 
 # Allow example/default files
 !/web/sites/default/default.settings.php
