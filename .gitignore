@@ -19,11 +19,8 @@
 #/web/sites/*/services.yml
 
 /web/sites/default/files
-<<<<<<< HEAD
 /web/sites/social/files
 /web/sites/tutorial/files
-=======
->>>>>>> 4cdf5abe5bab5822dffefcb5f51461b42de5749a
 
 # Allow example/default files
 !/web/sites/default/default.settings.php

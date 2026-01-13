@@ -905,9 +905,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
-<<<<<<< HEAD
+
 //$settings['config_sync_directory'] = 'sites/social/files/config_jyW8EmIyyGDCEoWcJwAdWN_SPlQzdMBHgXfshCmmRR_uRHRpliS37xNVlj67703H8xuSoMeWqA/sync';
 $settings['config_sync_directory'] = 'sites/social/config/sync';
-=======
-$settings['config_sync_directory'] = 'sites/social/files/config_jyW8EmIyyGDCEoWcJwAdWN_SPlQzdMBHgXfshCmmRR_uRHRpliS37xNVlj67703H8xuSoMeWqA/sync';
->>>>>>> 4cdf5abe5bab5822dffefcb5f51461b42de5749a
+
